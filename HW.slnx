@@ -1,8 +1,0 @@
-<Solution>
-  <Configurations>
-    <Platform Name="x64" />
-    <Platform Name="x86" />
-  </Configurations>
-  <Project Path="HW1_1/HW1_1.vcxproj" />
-  <Project Path="HW1_2/HW1_2.vcxproj" />
-</Solution>
