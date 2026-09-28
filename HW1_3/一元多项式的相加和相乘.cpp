@@ -1,5 +1,5 @@
-#include <algorithm>
 #include <iostream>
+#include <queue>
 #include <vector>
 using namespace std;
 
@@ -34,28 +34,57 @@ vector<Term> polyAdd(const vector<Term> &a, const vector<Term> &b) {
   return r;
 }
 
-// ---------- 多项式乘法：生成全部乘积项 -> 按指数排序 -> 合并同类项 ----------
-// 时间复杂度 O(m*n*log(m*n))，最多约 420 万个乘积项
-vector<Term> polyMul(const vector<Term> &a, const vector<Term> &b) {
-  vector<pair<ll, ll>> raw; // first = 指数, second = 系数（待合并）
-  raw.reserve(a.size() * b.size());
-  for (size_t i = 0; i < a.size(); ++i) {
-    for (size_t j = 0; j < b.size(); ++j) {
-      raw.push_back(
-          make_pair(a[i].second + b[j].second, a[i].first * b[j].first));
-    }
+// ---------- 多项式乘法：k 路归并 + 小顶堆（内存优化版）----------
+// 原理：乘积矩阵 M[i][j] = (A[i].c * B[j].c, A[i].e + B[j].e)，
+//       固定 i 时指数随 j 递增 => 共有 m 个有序序列，
+//       用小顶堆做 k 路归并，边弹出边合并同指数项，无需存全部乘积项。
+// 时间复杂度 O(m*n*log(min(m,n)))，空间 O(min(m,n)) + 结果
+struct Item {
+  ll c, e;  // 系数、指数
+  int i, j; // 来自 A[i] * B[j]
+};
+struct Cmp {
+  bool operator()(const Item &x, const Item &y) const {
+    return x.e > y.e; // 小顶堆：指数小的优先
   }
-  sort(raw.begin(), raw.end()); // 按指数递增排序
+};
+
+vector<Term> polyMul(const vector<Term> &x, const vector<Term> &y) {
+  // 让 a 为较短者：堆的大小 = a.size() = min(m, n)
+  const vector<Term> &a = (x.size() <= y.size()) ? x : y;
+  const vector<Term> &b = (x.size() <= y.size()) ? y : x;
+  if (a.empty() || b.empty())
+    return vector<Term>();
+
+  priority_queue<Item, vector<Item>, Cmp> pq;
+  // 每行（i）当前项：与 B 的第 0 项相乘
+  for (int i = 0; i < (int)a.size(); ++i) {
+    pq.push(Item{a[i].first * b[0].first, a[i].second + b[0].second, i, 0});
+  }
+
   vector<Term> r;
-  r.reserve(raw.size());
-  for (size_t i = 0; i < raw.size();) {
-    ll e = raw[i].first, c = 0;
-    while (i < raw.size() && raw[i].first == e) {
-      c += raw[i].second;
-      ++i;
+  r.reserve(a.size() + b.size()); // 结果最多 m+n-1 项
+  while (!pq.empty()) {
+    Item cur = pq.top();
+    pq.pop();
+    ll e = cur.e, c = cur.c;
+    // 该行推进到下一列（指数更大，不可能再等于当前 e）
+    if (cur.j + 1 < (int)b.size()) {
+      pq.push(Item{a[cur.i].first * b[cur.j + 1].first,
+                   a[cur.i].second + b[cur.j + 1].second, cur.i, cur.j + 1});
+    }
+    // 合并所有同指数的项（此刻它们相邻排在堆顶）
+    while (!pq.empty() && pq.top().e == e) {
+      Item nx = pq.top();
+      pq.pop();
+      c += nx.c;
+      if (nx.j + 1 < (int)b.size()) {
+        pq.push(Item{a[nx.i].first * b[nx.j + 1].first,
+                     a[nx.i].second + b[nx.j + 1].second, nx.i, nx.j + 1});
+      }
     }
     if (c != 0)
-      r.push_back(make_pair(c, e)); // 系数为 0 的项丢弃
+      r.push_back(make_pair(c, e)); // 系数为 0 丢弃
   }
   return r;
 }
