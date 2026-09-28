@@ -5,4 +5,7 @@
   </Configurations>
   <Project Path="HW1_1/HW1_1.vcxproj" Id="0d2fa49e-754e-42da-9f32-76f65e6517e7" />
   <Project Path="HW1_2/HW1_2.vcxproj" Id="7b2536ab-8f64-4112-bf58-b4f76e3ccffc" />
+  <Project Path="HW1_3/HW1_3.vcxproj" Id="890461c9-0887-47cb-b9b9-aeefb55f4027" />
+  <Project Path="HW1_4/HW1_4.vcxproj" Id="63fb8e0c-b5b9-4c82-ad0b-4a669462956a" />
+  <Project Path="HW1_5/HW1_5.vcxproj" Id="d1e064e3-dc3f-4f1f-b7d1-26b2ea405e77" />
 </Solution>
