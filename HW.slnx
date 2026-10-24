@@ -8,4 +8,9 @@
   <Project Path="HW1_3/HW1_3.vcxproj" Id="890461c9-0887-47cb-b9b9-aeefb55f4027" />
   <Project Path="HW1_4/HW1_4.vcxproj" Id="63fb8e0c-b5b9-4c82-ad0b-4a669462956a" />
   <Project Path="HW1_5/HW1_5.vcxproj" Id="d1e064e3-dc3f-4f1f-b7d1-26b2ea405e77" />
+  <Project Path="HW2-1/HW2-1.vcxproj" Id="a2fa33ef-857d-462f-9d9a-84432fddd885" />
+  <Project Path="HW2-2/HW2-2.vcxproj" Id="62572374-7325-47c1-9515-37d2a81dc023" />
+  <Project Path="HW2-3/HW2-3.vcxproj" Id="32a73e91-4be9-4af9-b68a-d56af175442a" />
+  <Project Path="HW2-4/HW2-4.vcxproj" Id="7dfe15aa-a511-4571-995c-3c4d27b5c6d2" />
+  <Project Path="HW2-5/HW2-5.vcxproj" Id="8c0539bc-0e8b-4372-95b4-e7d5173b0ac4" />
 </Solution>
