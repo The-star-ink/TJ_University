@@ -1,4 +1,4 @@
-// 2551746 计算机 陈珈铭
+//2551746 大数据 陈珈铭
 #define _CRT_SECURE_NO_WARNINGS
 #include <math.h>
 #include <stdio.h>
