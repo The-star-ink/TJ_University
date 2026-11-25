@@ -5,6 +5,8 @@
   </Configurations>
   <Project Path="12-b3/12-b3.vcxproj" Id="029f01e8-10be-45e8-b296-96c0f7d96bf2" />
   <Project Path="12-b4/12-b4.vcxproj" Id="b207d462-38ec-4082-9107-44e5ba0b8464" />
+  <Project Path="12-b8-1/12-b8-1.vcxproj" Id="995ee1bd-294d-4574-8510-6a40e7c8c02d" />
+  <Project Path="12-b8-2/12-b8-2.vcxproj" Id="3b3ed169-88a0-45ea-aa4e-c49fbaa2735a" />
   <Project Path="13-b1-1/13-b1-1.vcxproj" Id="3eece8b3-1728-476e-b381-4c525b468b75" />
   <Project Path="13-b1-2/13-b1-2.vcxproj" Id="abfda3d3-a2de-476f-997b-a86d9dc7e0b5" />
   <Project Path="13-b2/13-b2.vcxproj" Id="42e8af9d-ea3a-4f88-8e95-0bb702bd945a" />
@@ -12,5 +14,16 @@
   <Project Path="13-b5-1/13-b5-1.vcxproj" Id="2202f0d7-dd39-4f34-800d-924183d784c6" />
   <Project Path="13-b5-2/13-b5-2.vcxproj" Id="f0249a85-d62f-4b43-a05d-ed7969bbf6c1" />
   <Project Path="13-b6/13-b6.vcxproj" Id="da15140b-83a7-4371-9338-9f98734c9c43" />
+  <Project Path="14-b4/14-b4.vcxproj" Id="6152d166-dae4-4b09-ab2d-0f5dce74b75a" />
+  <Project Path="15-b1-1/15-b1-1.vcxproj" Id="7c21da23-013d-423b-9057-991892f04cd7" />
+  <Project Path="15-b1-2/15-b1-2.vcxproj" Id="e434001e-e20b-42a4-89ec-33aad1281664" />
+  <Project Path="15-b1-3/15-b1-3.vcxproj" Id="796f1cd1-772e-4529-8508-5135c2ea12d6" />
+  <Project Path="15-b1-4/15-b1-4.vcxproj" Id="02776fd0-8473-4156-a364-35319ca8c029" />
+  <Project Path="15-b2-1/15-b2-1.vcxproj" Id="e9dde5ce-3285-4cce-859e-b137caf064d3" />
+  <Project Path="15-b2-2/15-b2-2.vcxproj" Id="fbb2f14f-16c6-42af-a3f4-2907273a6d87" />
+  <Project Path="15-b3-1/15-b3-1.vcxproj" Id="b09e91aa-c692-4f3e-b423-cce76450b01a" />
+  <Project Path="15-b3-2/15-b3-2.vcxproj" Id="84571781-046f-4bca-92c5-734ca36e3ade" />
+  <Project Path="15-b4/15-b4.vcxproj" Id="dc3fe1aa-36a3-4068-9b6c-8435284fc3f2" />
+  <Project Path="15-b5/15-b5.vcxproj" Id="cf2ba4a8-76c5-44c7-b802-ca0a704ed568" />
   <Project Path="测试/测试.vcxproj" Id="843e803a-7285-40f8-ac81-669e7163f89a" />
 </Solution>

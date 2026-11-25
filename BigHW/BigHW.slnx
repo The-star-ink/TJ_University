@@ -1,0 +1,18 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="90-01-b1/90-01-b1.vcxproj" Id="7bd767f6-dbdc-4252-ac48-2026c04a4dad" />
+  <Project Path="90-01-b2/90-01-b2.vcxproj" Id="f8f4d74d-dcbb-44ba-bcd0-fd508a5fa8ce" />
+  <Project Path="90-02-b1/90-02-b1.vcxproj" Id="d69d95bf-da24-4ac5-a7f7-f014c3186e79" />
+  <Project Path="common/common.vcxproj" Id="36019a51-903e-4ed2-9209-523b4f8a1a19">
+    <Build Solution="Debug|*" Project="false" />
+  </Project>
+  <Project Path="include/include.vcxproj" Id="3adab40e-4394-49e4-9038-bf0b1f486647">
+    <Build Solution="Debug|*" Project="false" />
+  </Project>
+  <Project Path="my_ping/my_ping.vcxproj" Id="242c0113-31d5-4fb0-b9a7-19b2200b3293" />
+  <Project Path="test-cct/test-cct.vcxproj" Id="a3bd76c5-9f32-4e74-a7c3-35f9953844e1" />
+  <Project Path="test_args_analyse_tools/test_args_analyse_tools.vcxproj" Id="713d301f-d7b0-4164-85ad-aa21522ffa0a" />
+</Solution>

@@ -1,4 +1,4 @@
-// 2551746 大数据 陈珈铭
+//2551746 大数据 陈珈铭
 #include <cstring>
 #include <fstream>
 #include <iostream>
